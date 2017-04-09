@@ -5,39 +5,39 @@ function checkCashRegister(price, cash, cid) {
   let money = {
     penny: {
       value: 0.01,
-      amount: 0
+      amount: 0.00
     },
     nickel: {
       value: 0.05,
-      amount: 0
+      amount: 0.00
     },
     dime: {
       value: 0.10,
-      amount: 0
+      amount: 0.00
     },
     quarter: {
       value: 0.25,
-      amount: 0
+      amount: 0.00
     },
     one: {
       value: 1,
-      amount: 0
+      amount: 0.00
     },
     five: {
       value: 5,
-      amount: 0
+      amount: 0.00
     },
     ten: {
       value: 10,
-      amount: 0
+      amount: 0.00
     },
     twenty: {
       value: 20,
-      amount: 0
+      amount: 0.00
     },
     onehundred: {
       value: 100,
-      amount: 0
+      amount: 0.00
     }  
   };
   
@@ -45,7 +45,15 @@ function checkCashRegister(price, cash, cid) {
     let name = arr[0].toLowerCase().replace(/ /g, '');
     money[name].amount += arr[1];
   }
-  
+  cid.forEach(loadMoneny);
+
+  console.log(money);
+  let moneyArr = Object.keys(money);
+  let total = 0.00;
+  moneyArr.forEach(function (item) {
+    total += money[item].amount;
+  });
+  console.log('total: ', total);
   
   return change;
 }
