@@ -1,0 +1,16 @@
+{
+  "name": "free-code-camp-challenges",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exactChange.js",
+  "scripts": {
+    "start": "node exactChange",
+    "dev": "nodemon exactChange"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
